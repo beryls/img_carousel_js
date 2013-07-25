@@ -46,6 +46,13 @@ body {
   left: auto;
 }
 
+#show {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
 #slideshow {
-  margin: auto;
+  padding: 5px;
+  border-radius: 5%;
 }

@@ -5,6 +5,8 @@ window.onload = function() {
   // Buttons
   var next = document.getElementById('next');
   var previous = document.getElementById('previous');
+  var slideshow = document.getElementById('slideshow');
+  var runSlideshow = null;
 
   carousel.style.marginLeft = 0;
   var leftAmount = 0;
@@ -42,7 +44,6 @@ window.onload = function() {
 
   // Create onclick events to advance the images
 
-
   next.onclick = function(event) {
     toRight();
   }
@@ -51,4 +52,13 @@ window.onload = function() {
     toLeft();
   }
 
+  slideshow.onclick = function(event) {
+    if (runSlideshow == null) {
+      runSlideshow = window.setInterval(toRight, 1000);
+    } else {
+      clearInterval(runSlideshow);
+      runSlideshow = null;
+    }
+
+  }
 }
